@@ -1,0 +1,63 @@
+.exit {
+    height: 100%;
+    min-height: 1024px;
+    background-image: url("/assets/backout.png");
+}
+
+.info__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+}
+
+.title__email {
+    text-align: initial;
+    font-weight: bold;
+    
+}
+.form__block {
+    background-color: white !important;
+    line-height: 30px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #E4E4E4;
+}
+
+.formout {
+    width: 580px;
+    height: 541px;
+    border-radius: 20px;
+    background: white;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
+    display: grid;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 672px;
+    top: 239px;
+}
+
+.btn {
+    width: 353px;
+    height: 61px;
+    background: #FDBF5A;
+    border-radius: 70px;
+    font-size: 25px;
+    border: none;
+}
+
+.title__users {
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #828282;
+    padding-bottom: 15%;
+}

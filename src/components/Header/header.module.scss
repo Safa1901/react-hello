@@ -1,0 +1,39 @@
+.logo {
+    position: absolute;
+    height: 102px;
+    width: 100%;
+    background: #1C1A19;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+
+    &:before {
+        content: url("/assets/lofttaxi.png");
+        padding-top: 2%;
+        padding-right: 65%;
+    }
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.menu__nav {
+    margin-right: 25px;
+    
+    :last-child {
+        margin-right: 0;
+    }
+}
+
+.menu__title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 20px;
+
+}
