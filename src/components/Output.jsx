@@ -1,5 +1,6 @@
-import React from 'react'
-import { withAuth } from './AuthContext';
+import React from 'react';
+import {connect} from 'react-redux';
+import {logIn} from './actions';
 import s from './output.module.scss'
 
 class Output extends React.Component {
@@ -29,4 +30,7 @@ class Output extends React.Component {
 
 
 
-export default withAuth(Output);
+export default connect(
+    (state) => ({isLoggedIn: state.auth.isLoggedIn}),
+    { logIn }
+)(Output);
