@@ -4,7 +4,7 @@ import Profile from "./components/Profile";
 import Output from "./components/Output";
 import Header from "./components/Header/Header";
 import "./App.css";
-import { withAuth } from "./components/AuthContext";
+import {withAuth} from "./components/AuthContext";
 
 
 const Pages = [
@@ -14,21 +14,20 @@ const Pages = [
 ];
 
 class App extends React.Component {
-  state = { currentPage: Profile };
+  state = { currentPage: Output };
 
   navigateTo = (page) => {
     if (this.props.isLoggedIn){
       this.setState({ currentPage: page });
     }else{
-      this.setState({currentPage: "home"});
+      this.setState({currentPage: Output});
     }
   };
 
   render() {
-    const Page = () =>
-      typeof this.state.currentPage === "function"
-        ? this.state.currentPage()
-        : this.state.currentPage;
+    const Page = typeof this.state.currentPage === 'function'
+    ? this.state.currentPage
+    : () => this.state.currentPage;
 
     return (
       <>
