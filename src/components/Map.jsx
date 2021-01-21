@@ -28,4 +28,4 @@ class Map extends Component {
     }
 }
 
-export default new Map();
+export default Map;

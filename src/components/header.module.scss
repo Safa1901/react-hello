@@ -23,9 +23,9 @@
 }
 
 .menu__nav {
-    margin-right: 25px;
+    text-decoration: none;
     
-    :last-child {
+    &:last-child {
         margin-right: 0;
     }
 }
@@ -35,5 +35,11 @@
     font-weight: normal;
     font-size: 20px;
     line-height: 20px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+
+    &:hover {
+        color: #FDBF5A;
+    }
 
 }

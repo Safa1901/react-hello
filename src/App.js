@@ -1,40 +1,27 @@
 import React from "react";
 import Map from "./components/Map";
-import Profile from "./components/Profile";
-import Output from "./components/Output";
-import Header from "./components/Header/Header";
+import {HomeWithConnect} from "./components/Home";
+import Header from "./components/Header";
+import {connect} from 'react-redux';
+import {ProfileWithConnect} from "./components/Profile"
+import PropTypes from "prop-types";
+import {PrivateRoute} from './components/PrivateRoute'
 import "./App.css";
-import {withAuth} from "./components/AuthContext";
-
-
-const Pages = [
-  { component: Map, title: "Карта" },
-  { component: Profile, title: "Профиль" },
-  { component: Output, title: "Войти" },
-];
+import { Switch, Route } from "react-router-dom";
 
 class App extends React.Component {
-  state = { currentPage: Output };
-
-  navigateTo = (page) => {
-    if (this.props.isLoggedIn){
-      this.setState({ currentPage: page });
-    }else{
-      this.setState({currentPage: Output});
-    }
-  };
-
   render() {
-    const Page = typeof this.state.currentPage === 'function'
-    ? this.state.currentPage
-    : () => this.state.currentPage;
-
     return (
       <>
-        <Header pages={Pages} onPressed={this.navigateTo} />
+        <Header>
+        </Header>
         <main>
           <section>
-            <Page />
+            <Switch>
+              <Route  exact path='/' component={HomeWithConnect} />
+              <PrivateRoute  exact path='/map' component={Map} />
+              <PrivateRoute  exact path='/profile' component={ProfileWithConnect} />
+            </Switch>
           </section>
         </main>
       </>
@@ -42,4 +29,10 @@ class App extends React.Component {
   }
 }
 
-export default withAuth(App);
+App.propTypes = {
+  isLoggedIn: PropTypes.bool,
+};
+
+export default connect(
+  state => ({isLoggedIn: state.auth.isLoggedIn})
+)(App);

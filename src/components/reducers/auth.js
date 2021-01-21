@@ -4,7 +4,7 @@ const initialState = {
     isLoggedIn: false
 }
 
-export default function(state = initialState, action) {
+const state = (state = initialState, action) => {
     switch(action.type) {
         case LOG_IN: {
             return {isLoggedIn: true}
@@ -16,3 +16,5 @@ export default function(state = initialState, action) {
             return state;
     }
 }
+
+export default state;
