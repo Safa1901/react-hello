@@ -22,8 +22,10 @@ class Map extends Component {
     }
 
     render() {
-        return( <div className={s.map__wrapper}>
+        return( 
+        <div className={s.map__wrapper}>
             <div data-testid="s.map" className={s.map} ref={this.mapContainer}/>
+            {this.props.children}
         </div>)
     }
 }

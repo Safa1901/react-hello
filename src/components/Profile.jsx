@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import {logIn, logOut} from './actions'
 import {connect} from 'react-redux'
+// import Map from "./components/Map";
+
+
+
 
 export class Profile extends Component {
   unauthenticate = (event) => {
@@ -10,6 +14,7 @@ export class Profile extends Component {
 
   render() {
     return (
+      
       <p>
         Profile.
         <button onClick={this.unauthenticate}>Log out</button>
@@ -17,6 +22,7 @@ export class Profile extends Component {
     );
   }
 }
+
 
 export const ProfileWithConnect = connect(
   null,

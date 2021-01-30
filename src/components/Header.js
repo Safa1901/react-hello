@@ -12,7 +12,7 @@ const Header = (props) => (
             </Link>
           </li>
           <li>
-            <Link to='Map' className={s.menu__nav}>
+            <Link to='/Order' className={s.menu__nav}>
               <p className={s.menu__title}>Map</p>
             </Link>
           </li>

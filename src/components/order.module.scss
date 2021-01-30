@@ -1,0 +1,37 @@
+.order {
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    min-height: 300px;
+    width: 485px;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.order__title {
+    display: flex;
+    text-align: inherit;
+    flex-direction: column;
+    padding: 10%;
+}
+
+.order__text {
+    font-size: 36px;
+    line-height: 42px;
+}
+
+.order__info {
+    font-size: 18px;
+    line-height: 21px;
+    padding-bottom: 5%;
+}
+
+.btn {
+    width: 385px;
+    height: 35px;
+    background: #FDBF5A;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    line-height: 21px;
+}

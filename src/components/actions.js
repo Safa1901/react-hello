@@ -6,5 +6,5 @@ export const logIn = () => ({type: LOG_IN});
 export const logOut = () => ({type: LOG_OUT});
 export const authenticate = (email, password) => ({
     type: AUTHENTICATE, 
-    playload: { email,password }
+    payload: { email, password }
 });
